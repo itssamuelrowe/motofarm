@@ -35,11 +35,19 @@
             background-color: white;
             color: black;
         }
+        
+        @media screen and (min-width: 800px) {
+          #drawer-button {
+            display: none;
+          }  /* hide it on large screens */
+        }
+
     </style>
 </head>
 <body class="shop home-page">
 	<!-- Side Navigation Menu -->
-	<aside class="side-navigation-wrapper enter-right" data-no-scrollbar data-animation="scale-in">
+    
+	<aside id="drawer" class="side-navigation-wrapper enter-right" data-no-scrollbar data-animation="scale-in">
 		<div class="side-navigation-scroll-pane">
 			<div class="side-navigation-inner">
 				<div class="side-navigation-header">
@@ -102,7 +110,7 @@
                                     <a href="index.html" style="color: white; font-size: 24px; margin-left: -340px">Motofarm</a>
                                 </div>
 							</div>
-							<nav class="navigation nav-block secondary-navigation nav-right">
+							<nav class="navigation nav-block secondary-navigation nav-right" id="drawer-button">
 								<ul>
 									<li class="aux-navigation">
 										<!-- Aux Navigation -->
@@ -189,8 +197,7 @@
 
 				<!-- Hero 5 Signup Custom Section -->
 				<div id="about" style="background-color: #2B2B2B" class="section-block hero-5 hero-5-about-2 right window-height show-media-column-on-mobile">
-					<div class="media-column width-4"></div>
-					<div class="row">
+                    <div class="row">
 						<div class="column width-7">
 							<div class="hero-content split-hero-content">
 								<div class="hero-content-inner left horizon" data-animate-in="preset:slideInRightShort;duration:1000ms;delay:200ms;" data-threshold="0.6">
@@ -207,6 +214,9 @@
 								</div>
 							</div>
 						</div>
+                        <div class="column width-5">
+                            <div id="particles-js" style="height: 400px; margin-left: 24px; width: 100%"></div>
+                        </div>
 					</div>
 				</div>
 				<!-- Hero 5 Signup Custom Section End -->
@@ -616,5 +626,120 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?v=3"></script>
 	<script src="js/timber.master.min.js"></script>
+    
+    <script src="js/particles.min.js"></script>
+                    <script>
+                        particlesJS("particles-js", {
+                          "particles": {
+                            "number": {
+                              "value": 300,
+                              "density": {
+                                "enable": true,
+                                "value_area": 800
+                              }
+                            },
+                            "color": {
+                              "value": "#FE0000"
+                            },
+                            "shape": {
+                              "type": "circle",
+                              "stroke": {
+                                "width": 0,
+                                "color": "#FE0000"
+                              },
+                              "polygon": {
+                                "nb_sides": 5
+                              },
+                              "image": {
+                                "src": "img/github.svg",
+                                "width": 100,
+                                "height": 100
+                              }
+                            },
+                            "opacity": {
+                              "value": 0.5,
+                              "random": false,
+                              "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                              }
+                            },
+                            "size": {
+                              "value": 5,
+                              "random": true,
+                              "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                              }
+                            },
+                            "line_linked": {
+                              "enable": true,
+                              "distance": 150,
+                              "color": "#ffffff",
+                              "opacity": 0.4,
+                              "width": 1
+                            },
+                            "move": {
+                              "enable": true,
+                              "speed": 6,
+                              "direction": "none",
+                              "random": false,
+                              "straight": false,
+                              "out_mode": "out",
+                              "bounce": false,
+                              "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                              }
+                            }
+                          },
+                          "interactivity": {
+                            "detect_on": "canvas",
+                            "events": {
+                              "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                              },
+                              "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                              },
+                              "resize": true
+                            },
+                            "modes": {
+                              "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                  "opacity": 1
+                                }
+                              },
+                              "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                              },
+                              "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                              },
+                              "push": {
+                                "particles_nb": 4
+                              },
+                              "remove": {
+                                "particles_nb": 2
+                              }
+                            }
+                          },
+                          "retina_detect": true
+                        });
+                    </script>
+					
 </body>
 </html>
