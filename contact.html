@@ -21,6 +21,14 @@
 	<!--[if lt IE 9]>
     	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <style>
+        @media screen and (min-width: 800px) {
+          #drawer-button {
+            display: none;
+          }  /* hide it on large screens */
+        }
+    </style>
 
 </head>
 <body class="shop">
@@ -47,7 +55,7 @@
 									<a href="index.html#about">About</a>
 								</li>
 								<li>
-									<a href="index.html#gallery">Gallery</a>
+									<a href="gallery.html">Gallery</a>
 								</li>
 								<li>
 									<a href="index.html#services">Services</a>
@@ -88,7 +96,7 @@
 								<ul>
 									<li class="aux-navigation">
 										<!-- Aux Navigation -->
-										<a href="#" class="navigation-show side-nav-show nav-icon">
+										<a href="#" class="navigation-show side-nav-show nav-icon" id="drawer-button">
 											<span class="icon-menu"></span>
 										</a>
 									</li>
@@ -103,7 +111,7 @@
 										<a href="index.html#about" data-offset="-60">About</a>
 									</li>
 									<li>
-										<a href="index.html#gallery" data-offset="-60">Gallery</a>
+										<a href="gallery.html" data-offset="-60">Gallery</a>
 									</li>
 									<li>
 										<a href="index.html#services" data-offset="-60">Services</a>
